@@ -31,15 +31,15 @@ const theme = createTheme({
     },
 });
 
-const TourCard = () => {
+const TourCard = ({ tour }) => {
     return (
         <Grid item xs={3}>
             <ThemeProvider theme={theme}>
                 <Paper elevation={3} >
-                    <img src='https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758_960_720.jpg' alt='' className='img' />
+                    <img src={tour.image} alt='' className='img' />
                     <Box paddingX={1}>
                         <Typography variant="subtitle1" component="h2">
-                            Immerse into the Falls
+                            {tour.name}
                         </Typography>
 
                         <Box sx={{
@@ -48,7 +48,7 @@ const TourCard = () => {
                         }}>
                             <AccessTime sx={{ width: 12.5 }} />
                             <Typography variant="body2" component="p" marginLeft={0.5}>
-                                5 hours
+                                {tour.duration} hours
                             </Typography>
                         </Box>
                         <Box sx={{
@@ -59,19 +59,19 @@ const TourCard = () => {
                         >
 
                             <Rating
-                                name="read-only" value={4.5} precision={0.5} readOnly size="small"
+                                name="read-only" value={tour.rating} precision={0.5} readOnly size="small"
                             />
 
                             <Typography variant="body2" component="p" marginLeft={0.5}>
-                                4.5
+                                {tour.rating}
                             </Typography>
                             <Typography variant="body2" component="p" marginLeft={1.5}>
-                                (655 reviews)
+                                {tour.numberOfReviews}
                             </Typography>
                         </Box>
                         <Box>
                             <Typography variant="h6" component="h3" marginTop={0}>
-                                From XAF 450
+                                From XAF {tour.price}
                             </Typography>
                         </Box>
                     </Box>

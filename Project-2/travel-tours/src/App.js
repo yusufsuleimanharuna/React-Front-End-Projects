@@ -22,10 +22,7 @@ function App() {
               Top {city.name} Tours
             </Typography>
             <Grid container spacing={5}>
-              <TourCard />
-              <TourCard />
-              <TourCard />
-              <TourCard />
+              {city.tours.map((tour, index) => <TourCard tour={tour} key={index} />)}
             </Grid>
           </>
         ))}
