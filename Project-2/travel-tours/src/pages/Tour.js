@@ -5,6 +5,7 @@ import ImageCollage from "../components/ImageCollage";
 import CustomizedAccordions from "../components/Accordian"
 import Paper from "@mui/material/Paper";
 import BottomNavigation from "@mui/material/BottomNavigation";
+import BasicModal from "../components/Modal";
 
 const Tour = () => (
     <Container sx={{ width: 900 }}>
@@ -36,7 +37,7 @@ const Tour = () => (
 
         <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
             <BottomNavigation>
-
+                <BasicModal />
             </BottomNavigation>
         </Paper>
     </Container>
