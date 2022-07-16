@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import ImageCollage from "../components/ImageCollage";
+import CustomizedAccordions from "../components/Accordian"
 
 const Tour = () => (
     <Container sx={{ width: 900 }}>
@@ -17,8 +18,18 @@ const Tour = () => (
                 About this ticket
             </Typography>
             <Typography variant="paragraph" component="p" marginTop={3}>
-                "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These
+                "On the other hand, we denounce with righteous indignation and dislike men who are so
+                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs
+                to those who fail in their duty through weakness of will, which is the same as saying through shrinking from
+                toil and pain. These
             </Typography>
+        </Box>
+        <Box>
+            <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
+                Frequently Asked Questions
+            </Typography>
+            <CustomizedAccordions />
         </Box>
     </Container>
 )
