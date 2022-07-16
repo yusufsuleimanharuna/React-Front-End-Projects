@@ -3,6 +3,8 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import ImageCollage from "../components/ImageCollage";
 import CustomizedAccordions from "../components/Accordian"
+import Paper from "@mui/material/Paper";
+import BottomNavigation from "@mui/material/BottomNavigation";
 
 const Tour = () => (
     <Container sx={{ width: 900 }}>
@@ -25,12 +27,18 @@ const Tour = () => (
                 toil and pain. These
             </Typography>
         </Box>
-        <Box>
+        <Box marginBottom={10}>
             <Typography variant="h6" component="h4" marginTop={3} marginBottom={2}>
                 Frequently Asked Questions
             </Typography>
             <CustomizedAccordions />
         </Box>
+
+        <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+            <BottomNavigation>
+
+            </BottomNavigation>
+        </Paper>
     </Container>
 )
 
